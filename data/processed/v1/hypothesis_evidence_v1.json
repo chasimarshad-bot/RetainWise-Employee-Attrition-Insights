@@ -1,0 +1,97 @@
+{
+  "H1": {
+    "outcome": "Supported",
+    "difference_pp": 20.092413516274995,
+    "table": [
+      {
+        "OverTime": "No",
+        "n": 1054,
+        "attrited": 110,
+        "rate_pct": 10.436432637571157,
+        "caution": "Descriptive only"
+      },
+      {
+        "OverTime": "Yes",
+        "n": 416,
+        "attrited": 127,
+        "rate_pct": 30.528846153846153,
+        "caution": "Descriptive only"
+      }
+    ]
+  },
+  "H2": {
+    "outcome": "Supported",
+    "table": [
+      {
+        "Status": "Attrited",
+        "n": 237,
+        "mean": 5.1308016877637135,
+        "median": 3.0,
+        "q1": 1.0,
+        "q3": 7.0
+      },
+      {
+        "Status": "Retained",
+        "n": 1233,
+        "mean": 7.369018653690187,
+        "median": 6.0,
+        "q1": 3.0,
+        "q3": 10.0
+      }
+    ]
+  },
+  "H3": {
+    "outcome": "Mixed",
+    "table": [
+      {
+        "JobSatisfaction": 1,
+        "n": 289,
+        "attrited": 66,
+        "rate_pct": 22.837370242214533,
+        "caution": "Descriptive only"
+      },
+      {
+        "JobSatisfaction": 2,
+        "n": 280,
+        "attrited": 46,
+        "rate_pct": 16.428571428571427,
+        "caution": "Descriptive only"
+      },
+      {
+        "JobSatisfaction": 3,
+        "n": 442,
+        "attrited": 73,
+        "rate_pct": 16.5158371040724,
+        "caution": "Descriptive only"
+      },
+      {
+        "JobSatisfaction": 4,
+        "n": 459,
+        "attrited": 52,
+        "rate_pct": 11.328976034858387,
+        "caution": "Descriptive only"
+      }
+    ]
+  },
+  "H4": {
+    "outcome": "Supported",
+    "table": [
+      {
+        "Status": "Attrited",
+        "n": 237,
+        "mean": 4787.0928270042195,
+        "median": 3202.0,
+        "q1": 2373.0,
+        "q3": 5916.0
+      },
+      {
+        "Status": "Retained",
+        "n": 1233,
+        "mean": 6832.739659367397,
+        "median": 5204.0,
+        "q1": 3211.0,
+        "q3": 8834.0
+      }
+    ]
+  }
+}

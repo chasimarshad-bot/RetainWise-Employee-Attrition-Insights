@@ -1,0 +1,44 @@
+{
+  "version": "v1",
+  "source": "IBM HR Analytics Employee Attrition & Performance",
+  "source_url": "https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset",
+  "source_sha256": "a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659",
+  "processed_sha256": "cf8204eeefb2adfe42e16ef31c58a54e4abc99309f5aa9abcb5807c950920f9b",
+  "validation": {
+    "rows": 1470,
+    "columns": 35,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "identifier_unique": true,
+    "constant_columns": [
+      "EmployeeCount",
+      "Over18",
+      "StandardHours"
+    ],
+    "target_counts": {
+      "No": 1233,
+      "Yes": 237
+    }
+  },
+  "rows": 1470,
+  "columns": 35,
+  "excluded": [
+    "EmployeeNumber",
+    "EmployeeCount",
+    "Over18",
+    "StandardHours"
+  ],
+  "transformations": [
+    "Attrition_Flag: Yes=1, No=0",
+    "Status: Yes=Attrited, No=Retained",
+    "AgeBand: [18,29], [30,39], [40,49], [50,60]",
+    "TenureBand: [0,1], [2,5], [6,10], [11,infinity]"
+  ],
+  "licence": "Database: Open Database, Contents: Database Contents (Kaggle metadata)",
+  "limitations": [
+    "Fictional population",
+    "No dated exits",
+    "No causal identification",
+    "Income currency undocumented"
+  ]
+}

@@ -1,0 +1,36 @@
+field,dtype,description,unique_values,missing
+Age,int64,Age in years; used only for aggregate audit.,43,0
+Attrition,object,Source outcome: Yes / No; no exit date is supplied.,2,0
+BusinessTravel,object,Source travel-frequency category; no measured journey counts.,3,0
+DailyRate,int64,Source daily rate; units and interpretation not documented.,886,0
+Department,object,Source organisational department.,3,0
+DistanceFromHome,int64,Source distance from home; distance unit not documented.,29,0
+Education,int64,Source ordinal scale: 1=Below college; 2=College; 3=Bachelor; 4=Master; 5=Doctor,5,0
+EducationField,object,Source education field category.,6,0
+EnvironmentSatisfaction,int64,Source ordinal scale: 1=Low; 2=Medium; 3=High; 4=Very high,4,0
+Gender,object,"Source-labelled Female/Male; incomplete representation, not a legal definition of sex.",2,0
+HourlyRate,int64,Source hourly rate; currency not documented.,71,0
+JobInvolvement,int64,Source ordinal scale: 1=Low; 2=Medium; 3=High; 4=Very high,4,0
+JobLevel,int64,"Source job level, integer category.",5,0
+JobRole,object,Source job-role category.,9,0
+JobSatisfaction,int64,Source ordinal scale: 1=Low; 2=Medium; 3=High; 4=Very high,4,0
+MaritalStatus,object,Source marital-status category; does not establish civil-partnership status.,3,0
+MonthlyIncome,int64,Monthly income in source units; currency not documented.,1349,0
+MonthlyRate,int64,Source monthly rate; interpretation and currency not documented.,1427,0
+NumCompaniesWorked,int64,Number of companies worked at in source.,10,0
+OverTime,object,Source overtime category: Yes / No; hours are unavailable.,2,0
+PercentSalaryHike,int64,Source salary increase percentage.,15,0
+PerformanceRating,int64,Source ordinal scale: 1=Low; 2=Good; 3=Excellent; 4=Outstanding,2,0
+RelationshipSatisfaction,int64,Source ordinal scale: 1=Low; 2=Medium; 3=High; 4=Very high,4,0
+StockOptionLevel,int64,"Source stock-option level, integer category.",4,0
+TotalWorkingYears,int64,Total working years in source.,40,0
+TrainingTimesLastYear,int64,Source training instances in last year; no dated history.,7,0
+WorkLifeBalance,int64,Source ordinal scale: 1=Bad; 2=Good; 3=Better; 4=Best,4,0
+YearsAtCompany,int64,Years at company in source.,37,0
+YearsInCurrentRole,int64,Years in current role in source.,19,0
+YearsSinceLastPromotion,int64,Years since last promotion in source.,16,0
+YearsWithCurrManager,int64,Years with current manager in source.,18,0
+Attrition_Flag,int64,"Derived: Yes=1, No=0; group mean is observed attrition proportion.",2,0
+AgeBand,object,"Derived integer ages: 18–29, 30–39, 40–49, 50–60.",4,0
+TenureBand,object,"Derived company tenure: 0–1, 2–5, 6–10, 11+ years.",4,0
+Status,object,"Derived display label: Yes=Attrited, No=Retained.",2,0
