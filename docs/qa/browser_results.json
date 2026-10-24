@@ -1,0 +1,98 @@
+[
+  {
+    "page": "overview",
+    "width": 1440,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "patterns",
+    "width": 1440,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "hypotheses",
+    "width": 1440,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "governance",
+    "width": 1440,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "methodology",
+    "width": 1440,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "overview",
+    "width": 768,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "patterns",
+    "width": 768,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "hypotheses",
+    "width": 768,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "governance",
+    "width": 768,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "methodology",
+    "width": 768,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "overview",
+    "width": 390,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "patterns",
+    "width": 390,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "hypotheses",
+    "width": 390,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "governance",
+    "width": 390,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "page": "methodology",
+    "width": 390,
+    "http": 200,
+    "horizontal_page_overflow": false
+  },
+  {
+    "navigation": "all sidebar links passed"
+  },
+  {
+    "explorer": "satisfaction and monthly income selection passed"
+  }
+]

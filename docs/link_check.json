@@ -1,0 +1,46 @@
+{
+  "external": [
+    {
+      "url": "https://github.com/users/chasimarshad-bot/projects/4",
+      "status": 404,
+      "note": "Access restriction or failure; review manually"
+    },
+    {
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/monitoring-workers/",
+      "status": 200
+    },
+    {
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/monitoring-workers/what-do-we-need-to-do-if-we-use-monitoring-tools-that-use-solely-automated-processes/",
+      "status": 200
+    },
+    {
+      "url": "https://opendatacommons.org/licenses/dbcl/1-0/",
+      "status": 200
+    },
+    {
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "status": 200
+    },
+    {
+      "url": "https://share.streamlit.io/",
+      "status": 200
+    },
+    {
+      "url": "https://www.kaggle.com/api/v1/datasets/download/pavansubhasht/ibm-hr-analytics-attrition-dataset",
+      "status": 200
+    },
+    {
+      "url": "https://www.kaggle.com/api/v1/datasets/view/pavansubhasht/ibm-hr-analytics-attrition-dataset",
+      "status": 200
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset",
+      "status": 200
+    },
+    {
+      "url": "https://www.legislation.gov.uk/ukpga/2010/15/section/4",
+      "status": 200
+    }
+  ],
+  "missing_local_links": []
+}
