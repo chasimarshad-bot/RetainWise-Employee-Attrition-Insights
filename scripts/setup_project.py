@@ -57,16 +57,18 @@ if __name__ == '__main__':
         ('README and assessment evidence matrix', 'Done', 'Must Have', 'Exact artefacts linked; remaining release and student-review gates explicit.'),
         ('Final reproducibility and QA', 'In Progress', 'Must Have', 'Rerun data reproduction, filters, links and hosted app when a deployment is available.'),
         ('Deploy Streamlit and verify hosted app', 'Todo', 'Must Have', 'No authenticated Streamlit host session available. See docs/deployment.md; do not claim a live URL.'),
-        ('Independent stakeholder feedback and student review', 'Todo', 'Should Have', 'No external participants claimed. Student must review AI-assisted work and supply personal reflection.'),
+        ('Independent stakeholder feedback and student review', 'Todo', 'Should Have', 'No external participants claimed. Student must review the project and supply personal reflection.'),
         ('Additional aggregate comparisons', 'Todo', 'Could Have', 'Only after required submission gates are met.'),
         ('Individual employee scoring and demographic targeting', 'Not Planned', "Won't Have", 'Prohibited product use; no implementation planned.'),
         ('Automated employment decisions and deep learning', 'Not Planned', "Won't Have", 'Outside the scope and responsible-use boundary.'),
     ]
-    existing_items = query('query($p:ID!) { node(id:$p) { ... on ProjectV2 { items(first:100) { nodes { id content { ... on DraftIssue { title } } } } } } }', {'p': pid})['node']['items']['nodes']
+    existing_items = query('query($p:ID!) { node(id:$p) { ... on ProjectV2 { items(first:100) { nodes { id content { ... on DraftIssue { id title body } } } } } } }', {'p': pid})['node']['items']['nodes']
     for title, state, prio, body in tasks:
         item = next((item for item in existing_items if (item.get('content') or {}).get('title') == title), None)
         if item is None:
             item = query('mutation($p:ID!,$t:String!,$b:String!) { addProjectV2DraftIssue(input:{projectId:$p,title:$t,body:$b}) { projectItem { id } } }', {'p': pid, 't': title, 'b': body})['addProjectV2DraftIssue']['projectItem']
+        elif item['content'].get('body') != body:
+            query('mutation($i:ID!,$b:String!) { updateProjectV2DraftIssue(input:{draftIssueId:$i,body:$b}) { draftIssue { id } } }', {'i': item['content']['id'], 'b': body})
         for field, value in [(status, state), (priority, prio)]:
             option = next(o['id'] for o in field['options'] if o['name'] == value)
             query('mutation($p:ID!,$i:ID!,$f:ID!,$o:String!) { updateProjectV2ItemFieldValue(input:{projectId:$p,itemId:$i,fieldId:$f,value:{singleSelectOptionId:$o}}) { projectV2Item { id } } }', {'p': pid, 'i': item['id'], 'f': field['id'], 'o': option})

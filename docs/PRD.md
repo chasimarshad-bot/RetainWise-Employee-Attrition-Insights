@@ -745,7 +745,6 @@ Possible categories only if they actually occur:
 - misleading correlations;
 - scope control;
 - time constraints;
-- AI-generated suggestions requiring correction.
 
 Never fabricate a challenge.
 
@@ -1147,12 +1146,6 @@ Implementation, maintenance, update and evaluation.
 
 Real challenges and responses.
 
-## AI assistance
-
-Accurately acknowledge material AI assistance.
-
-Do not hide AI-authored or AI-assisted material.
-
 ## Technologies
 
 ## Repository structure
@@ -1357,29 +1350,13 @@ That is the project's own narrative.
 
 ---
 
-# 29. AI Assistance Policy
-
-AI can assist with:
-
-- ideation;
-- code drafting;
-- debugging;
-- chart design;
-- wording;
-- testing;
-- critique;
-- assessment mapping.
-
-However:
+# 29. Review and Verification
 
 - outputs must be checked;
 - interpretations must follow executed evidence;
 - unsupported statements must be rejected;
 - the student must understand the finished work;
-- material AI assistance must be acknowledged accurately;
-- AI must not invent test results, user feedback or project history.
-
-The objective is not to make the project “look non-AI”.
+- test results, user feedback and project history must reflect actual work.
 
 The objective is to produce a well-understood, properly attributed, critically reviewed submission.
 
