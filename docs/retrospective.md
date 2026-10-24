@@ -1,0 +1,17 @@
+This is a build record prepared with AI assistance, not the student's personal reflection. Ch Asim should review it and add his own account before submission.
+
+**Source terms required a check.** The Kaggle metadata lists “Database: Open Database, Contents: Database Contents”. Treating the dataset as generically public-domain would have been inaccurate. The acquisition record preserves the actual label and distinguishes source-data terms from project code.
+
+**The satisfaction hypothesis needed a qualified result.** Rates fall between categories 1 and 2, rise slightly at 3, then fall at 4. The analysis retains the original question and labels H3 Mixed rather than smoothing the chart or rewriting the hypothesis.
+
+**Filtering changes the evidence.** Intersecting department, role, travel and overtime can yield no rows or a very small cohort. The interface provides an explicit empty state, a reset action, minimum-group withholding and denominators. The Hypothesis Lab stays on the full population so its declared baseline cannot silently change.
+
+**A cleaner file is not an anonymous population.** Removing EmployeeNumber reduces unnecessary exposure but does not establish anonymity. Box plots and histograms send aggregate statistics to the browser; no raw-record download is offered. Documentation explains why repeated filtering still needs a disclosure-control review for real data.
+
+**Hosting must fit the required stack.** The available Sites host runs Cloudflare Workers, whereas the PRD specifies a persistent Python Streamlit process. Rewriting the capstone into a different stack would weaken reproducibility. The project retains Streamlit and supplies a container and Community Cloud deployment procedure, with live status recorded honestly.
+
+**Plain language still needs precision.** “Attrition rate” can imply a time-based measure. The app clarifies that this source provides a snapshot proportion without dates. Income remains in source units, avoiding a currency assumption. These choices limit the story but make it defensible.
+
+**Correct numbers did not guarantee a useful chart.** Screenshot inspection showed that precomputed box summaries overlapped because the traces lacked separate categorical positions. Explicit outcome positions fixed the comparison, and a regression assertion now checks those labels. A blanket update of Streamlit width arguments also exposed a version-specific Plotly warning; chart calls retain the supported argument while tables and buttons use the newer one. Visual review therefore added evidence that execution-only tests could not supply.
+
+**Account permissions constrained automation.** The bot's token supports repository and project writes but not workflow changes. The CI definition is preserved as a template rather than presented as an active or passing remote workflow. Local execution remains the recorded QA evidence.

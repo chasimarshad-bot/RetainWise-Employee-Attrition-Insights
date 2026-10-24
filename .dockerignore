@@ -1,0 +1,9 @@
+.git
+.venv
+.env*
+data/raw
+jupyter_notebooks
+artifacts
+__pycache__
+tests
+.streamlit/secrets.toml

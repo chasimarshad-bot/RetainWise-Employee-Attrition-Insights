@@ -15,6 +15,8 @@ Kaggle's first-party metadata lists **Database: Open Database, Contents: Databas
 
 The untouched raw CSV is retained for reproducibility. The derived v1 database excludes four fields and adds four documented fields, preserving source records. Source metadata is recorded separately in `data/source_record.json`; processing hashes and transformations are in `data/processed/v1/metadata_v1.json`.
 
+The v1 derivative database is made available under ODbL 1.0, with its contents under DbCL 1.0, retaining the source attribution above. A copy is included in this repository, and the transformation code is in `retainwise/data.py` and notebook 02.
+
 ## Interpretation limits
 
 There is no dated observation window, causal design, exit explanation or documented currency. Outcome imbalance and the small fictional population constrain comparisons. Category scales are source labels, not validated measures of real employee experience. The binary Gender field excludes other identities and must not be treated as a legal definition of sex. No result should be extrapolated to an employer's actual workforce.

@@ -60,8 +60,16 @@ def test_distribution_charts_send_aggregates_without_individual_points():
     for trace in boxes(df, 'MonthlyIncome', 'Income').data:
         assert trace.y is None and trace.boxpoints is False
         assert len(trace.median) == 1
+        assert trace.x[0] == trace.name
     fig = histogram(df, 'YearsAtCompany', 'Tenure')
     assert len(fig.data) == 2
     for trace in fig.data:
         assert len(trace.y) == 12
         assert sum(trace.y) == pytest.approx(100)
+
+
+def test_one_outcome_distribution_is_valid():
+    df = load_data()
+    retained = df.loc[df.Status == 'Retained']
+    assert len(boxes(retained, 'MonthlyIncome', 'Income').data) == 1
+    assert len(histogram(retained, 'MonthlyIncome', 'Income').data) == 1

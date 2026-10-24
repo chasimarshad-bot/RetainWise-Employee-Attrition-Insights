@@ -10,3 +10,7 @@ __pycache__/
 .streamlit/secrets.toml
 .DS_Store
 Thumbs.db
+data/raw/*.zip
+data/raw/kaggle_*.json
+data/raw/source_metadata.json
+artifacts/browser/
