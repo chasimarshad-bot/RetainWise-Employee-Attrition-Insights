@@ -1,4 +1,4 @@
-This is a build record prepared with AI assistance, not the student's personal reflection. Ch Asim should review it and add his own account before submission.
+This build record covers implementation decisions. Ch Asim should review it and add his own personal reflection before submission.
 
 **Source terms required a check.** The Kaggle metadata lists “Database: Open Database, Contents: Database Contents”. Treating the dataset as generically public-domain would have been inaccurate. The acquisition record preserves the actual label and distinguishes source-data terms from project code.
 

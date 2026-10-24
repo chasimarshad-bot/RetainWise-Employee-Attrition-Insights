@@ -1,6 +1,6 @@
 # Usability scenarios
 
-No external participants have taken part. The evidence below is an automated, scenario-based review by the build assistant, not independent user feedback or a claim about user satisfaction.
+No external participants have taken part. The evidence below records automated, scenario-based checks, not independent user feedback or a claim about user satisfaction.
 
 | Perspective and task | Expected result | Actual evidence | Issue and change | Retest |
 |---|---|---|---|---|

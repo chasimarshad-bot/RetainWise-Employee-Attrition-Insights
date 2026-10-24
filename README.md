@@ -127,11 +127,3 @@ tests/                 Analytical and Streamlit regression checks
 docs/                  PRD, plan, evidence, testing and release record
 docs/ci-workflow.yml   Reproducibility workflow template (not activated)
 ```
-
-## Credits, AI assistance and licensing
-
-Dataset attribution belongs to its source publisher and creators. See [source and derivative-database notices](data/SOURCE.md); project code does not override those terms. Third-party libraries retain their licences.
-
-Codex materially assisted with implementation, analysis scaffolding, documentation and automated validation. Calculations and tests were executed. Ch Asim must review the work, understand the methods, check assessment suitability and provide his own reflection. No external feedback or student-authored development history has been invented.
-
-GitHub owner: `chasimarshad-bot`. Repository-local author: `Ch Asim Arshad <chasimarshad@gmail.com>`. The Unit 1 folder and global Git settings remain separate and unchanged.

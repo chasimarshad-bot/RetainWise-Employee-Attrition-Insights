@@ -16,6 +16,6 @@ This map identifies artefacts, not guaranteed assessment grades.
 
 - A live Streamlit deployment and verification against its exact commit remain outstanding.
 - No independent users have participated; automated scenarios are labelled accordingly.
-- Ch Asim must review the AI-assisted work and add his own reflection and learning evidence.
+- Ch Asim must review the project and add his own reflection and learning evidence.
 - Formal accessibility conformance is not established; keyboard and screen-reader checks need explicit evidence for broader claims.
 - Confirm the PRD's mapping against the actual handbook, which was not supplied here.

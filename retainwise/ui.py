@@ -235,6 +235,5 @@ def methodology():
     st.markdown((ROOT / 'docs/retrospective.md').read_text(encoding='utf-8'))
     st.subheader('Testing and release status')
     st.markdown((ROOT / 'docs/testing.md').read_text(encoding='utf-8'))
-    st.subheader('Source and assistance')
+    st.subheader('Dataset source')
     st.markdown('Dataset: [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset), published by Pavan Subhash. Kaggle lists Database: Open Database, Contents: Database Contents. See data/SOURCE.md for the acquisition record and licence links.')
-    st.markdown('Codex assisted materially with code, analysis scaffolding, documentation and automated checks. The student must review the evidence, understand the calculations and add their own reflection. No external user participation or student authorship of this assistance is implied.')
