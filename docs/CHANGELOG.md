@@ -9,5 +9,6 @@
 - Built five Streamlit pages with filters, exact evidence and governance controls.
 - Added analytical/app tests, browser QA, a CI template and deployment preparation.
 - Created the Unit 3 GitHub Project with Status and MoSCoW Priority fields.
+- Verified notebook execution, 15 tests and identical v1 outputs from a fresh GitHub clone.
 
 Live deployment, external user feedback and student personal reflection remain outstanding until evidenced.

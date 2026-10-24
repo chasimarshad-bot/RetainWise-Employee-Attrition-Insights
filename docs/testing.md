@@ -4,6 +4,7 @@ Checks performed on 24 October 2026 using an isolated Python 3.12.8 virtual envi
 |---|---|
 | Fresh-kernel notebooks 01–03 | All completed without a cell error, including rerun after chart corrections |
 | Recreate v1 | Processed CSV, dictionary, metadata and hypothesis JSON reproduced without Git diff |
+| Fresh remote checkout | Cloned the pushed repository from GitHub; all three notebooks, 15 tests and v1 reproduction passed using the isolated Python environment |
 | pytest | 15 passed; includes source rejection, band boundaries, known figures, hypothesis outcomes, small cells, empty/reset behaviour, all page functions, all explorer measures and audit selectors |
 | Browser pages | All five pages returned HTTP 200 at 390×844, 768×1024 and 1440×1000; no Streamlit exception or horizontal page overflow |
 | Actual navigation | All four non-default sidebar page links opened their expected heading |
