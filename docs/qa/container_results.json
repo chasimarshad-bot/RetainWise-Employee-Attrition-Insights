@@ -1,0 +1,35 @@
+{
+  "review_date": "2026-10-25",
+  "runtime": "Linux container, Python 3.12.8",
+  "image_id": "sha256:1acc9c74f439528dbcfacbf82fda3a63e1c9490fd74086bad5d09a5e6adb9853",
+  "user": "appuser",
+  "port_override": 10000,
+  "health_http": 200,
+  "pages": [
+    {
+      "page": "overview",
+      "http_status": 200,
+      "exception": false
+    },
+    {
+      "page": "patterns",
+      "http_status": 200,
+      "exception": false
+    },
+    {
+      "page": "hypotheses",
+      "http_status": 200,
+      "exception": false
+    },
+    {
+      "page": "governance",
+      "http_status": 200,
+      "exception": false
+    },
+    {
+      "page": "methodology",
+      "http_status": 200,
+      "exception": false
+    }
+  ]
+}

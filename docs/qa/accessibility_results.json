@@ -1,0 +1,69 @@
+{
+  "tool": "axe-core 4.10.3",
+  "pages": [
+    {
+      "page": "overview",
+      "violations": [],
+      "passed_rules": 28,
+      "manual_review_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "patterns",
+      "violations": [],
+      "passed_rules": 30,
+      "manual_review_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "hypotheses",
+      "violations": [],
+      "passed_rules": 28,
+      "manual_review_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "governance",
+      "violations": [],
+      "passed_rules": 28,
+      "manual_review_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "methodology",
+      "violations": [],
+      "passed_rules": 30,
+      "manual_review_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    }
+  ],
+  "keyboard_tasks": [
+    {
+      "task": "Change workplace measure using arrows and Enter",
+      "result": "passed"
+    },
+    {
+      "task": "Move between tabs using the keyboard",
+      "result": "passed"
+    },
+    {
+      "task": "Navigate to the Lab with Enter",
+      "result": "passed"
+    },
+    {
+      "task": "Open technical evidence using Enter",
+      "result": "passed"
+    }
+  ],
+  "limits": "Automated WCAG-tagged rules and four keyboard tasks; not a screen-reader audit or conformance certification."
+}

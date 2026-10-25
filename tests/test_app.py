@@ -45,3 +45,10 @@ def test_explorer_and_demographic_selections_render():
     for field in ['AgeBand', 'Gender', 'MaritalStatus']:
         app.selectbox[0].set_value(field).run()
         assert not app.exception, field
+
+
+def test_methodology_links_open_repository_files_instead_of_app_routes():
+    from retainwise.ui import document_text
+    text = document_text('testing.md')
+    assert 'https://github.com/chasimarshad-bot/RetainWise-Employee-Attrition-Insights/blob/main/docs/qa/browser_results.json' in text
+    assert '](qa/browser_results.json)' not in text

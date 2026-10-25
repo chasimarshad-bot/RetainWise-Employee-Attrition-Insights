@@ -22,6 +22,10 @@
       "status": 200
     },
     {
+      "url": "https://render.com/docs/blueprint-spec",
+      "status": 200
+    },
+    {
       "url": "https://share.streamlit.io/",
       "status": 200
     },

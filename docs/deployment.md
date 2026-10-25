@@ -22,7 +22,7 @@ The reviewed v1 dataset is committed; no Kaggle credentials or notebook executio
 4. Deploy without secrets. Confirm all five pages, filters, an empty selection, figures and external links on the hosted app.
 5. Record the returned URL in the README and this file, note the tested commit, and confirm access settings before claiming release.
 
-This environment has GitHub credentials but no authenticated Streamlit hosting session. The available Sites host supports Cloudflare Workers rather than a persistent Python Streamlit server. No deployment credential has been requested or embedded in source.
+Hosting account authorisation is still required. No deployment credential is embedded in source, and no public address is claimed before a hosted app has been verified.
 
 ## Container alternative
 
@@ -31,7 +31,13 @@ docker build -t retainwise .
 docker run --rm -p 8501:8501 retainwise
 ```
 
-The container listens on port 8501 or the hosting provider's PORT setting. Deploy it to an authorised Python/container service, configure HTTPS and access controls, and verify the health endpoint `/_stcore/health`. Container instructions are not a claim that an image has been built or deployed here.
+The container listens on port 8501 or the hosting provider's PORT setting. It runs as the non-root appuser and uses the same port for its health check. The local Linux image has been built and exercised: the health endpoint and all five pages passed. This is runtime verification, not a public deployment.
+
+## Render blueprint
+
+`render.yaml` defines a Docker web service on the free plan, with the Streamlit health endpoint and automatic deployment disabled. The configuration follows [Render's blueprint specification](https://render.com/docs/blueprint-spec). Before creating a service, connect the hosting account to the private GitHub repository owned by `chasimarshad-bot`.
+
+Create the service from the blueprint, confirm that the selected plan is free, deploy the reviewed main revision, and wait for a successful health check. Record the returned HTTPS address and deployed revision here and in the README only after opening every page and checking filter/reset behaviour. Confirm that the assessor can access the hosted app and source evidence. No service has been created while hosting access is unavailable.
 
 ## Release gate
 

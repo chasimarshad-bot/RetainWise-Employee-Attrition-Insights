@@ -1,5 +1,14 @@
 # Changelog
 
+## Submission candidate · 25 October 2026
+
+- Updated Streamlit to 1.66.1 and added accessible chart descriptions.
+- Corrected caption contrast, document-link resolution and test discovery.
+- Completed 16 automated checks, responsive page checks, a five-page accessibility scan and four keyboard tasks.
+- Built and exercised the Linux container with a non-root runtime user.
+- Added the Render blueprint, assessor walkthrough, technical review guide, submission checklist and reproducible archive tooling.
+- Retained explicit owner/student checks for hosting access, personal review and handbook confirmation.
+
 ## Unreleased · 24 October 2026
 
 - Created a separate Unit 3 repository with Ch Asim's local Git identity.

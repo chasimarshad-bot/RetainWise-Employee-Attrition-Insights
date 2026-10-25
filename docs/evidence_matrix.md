@@ -12,10 +12,12 @@ This map identifies artefacts, not guaranteed assessment grades.
 | 3.1 · Full project plan | Project lifecycle and reflection | Methodology & Project Plan | GitHub Project; plan.md; lifecycle.md; deployment.md |
 | 3.2 · Reflection on execution | Project lifecycle and reflection | Build reflection on Methodology page | retrospective.md; CHANGELOG.md; actual Git history |
 
-## Open submission gates
+## Final owner/student checks
 
 - A live Streamlit deployment and verification against its exact commit remain outstanding.
-- No independent users have participated; automated scenarios are labelled accordingly.
 - Ch Asim must review the project and add his own reflection and learning evidence.
-- Formal accessibility conformance is not established; keyboard and screen-reader checks need explicit evidence for broader claims.
 - Confirm the PRD's mapping against the actual handbook, which was not supplied here.
+
+## Recorded test scope
+
+The PRD permits accurately labelled scenario-based self-testing when external participants are unavailable; that evidence is recorded. Independent feedback remains optional strengthening. Automated accessibility checks and four keyboard tasks have been executed; no formal conformance or screen-reader audit is claimed. See [the submission checklist](submission_checklist.md) for the distinction between technical evidence and final owner/student checks.

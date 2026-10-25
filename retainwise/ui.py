@@ -1,5 +1,6 @@
 """Audience-specific pages sharing reviewed analytics and filter behaviour."""
 import json
+import re
 import pandas as pd
 import streamlit as st
 from .data import ROOT, PROCESSED, load_data, AGE_ORDER, TENURE_ORDER, ORDINALS
@@ -19,6 +20,19 @@ LABELS = {'OverTime': 'Overtime', 'JobSatisfaction': 'Job satisfaction', 'Enviro
 @st.cache_data
 def data():
     return load_data()
+
+
+def document_text(name):
+    """Resolve document links against the repository, rather than app routes."""
+    text = (ROOT / 'docs' / name).read_text(encoding='utf-8')
+    base = 'https://github.com/chasimarshad-bot/RetainWise-Employee-Attrition-Insights/'
+    def replace(match):
+        label, target = match.groups()
+        if target.startswith(('https://', 'http://', '#', 'mailto:')):
+            return match.group(0)
+        location = 'tree/main/docs/' if target.endswith('/') else 'blob/main/docs/'
+        return f'[{label}]({base}{location}{target})'
+    return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace, text)
 
 
 def reset():
@@ -84,7 +98,7 @@ def rate_chart(df, field, title, order=None):
         display[field] = display[field].map(lambda value: f'{value} · {ORDINALS[field][value]}').astype(str)
     fig = charts.rates(display, field, title)
     fig.update_xaxes(title_text=label)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch', alt=f'{title}. The figures table provides group sizes, attrited counts and observed percentages.')
     if table.rate_pct.isna().any():
         st.caption('Some groups are withheld (n < 10). Their attrition counts and rates are omitted from the chart and table.')
     table_detail(display)
@@ -107,7 +121,7 @@ def executive():
     st.markdown(f'In the current selection, **{left:,} of {total:,} records** show attrition. The remaining **{100*(total-left)/total:.1f}%** show retention. There is no observation period, so this is a dataset proportion rather than an annual attrition rate.')
     left_col, right_col = st.columns(2)
     with left_col:
-        st.plotly_chart(charts.outcomes(df), use_container_width=True)
+        st.plotly_chart(charts.outcomes(df), width='stretch', alt=f'Employee outcomes: {total-left:,} retained and {left:,} attrited in the selected cohort.')
         explain('Counts for each outcome in the selected group.', 'The imbalance helps put rate comparisons in context: fewer records describe employees who left.')
         table_detail(df.Status.value_counts().rename_axis('Outcome').reset_index(name='Employees'))
     with right_col:
@@ -141,11 +155,11 @@ def patterns():
         explain('Each bar is the share of its group recorded as attrited, not the number of employees in that group.', 'Comparing rates helps distinguish a large workforce group from a group with a larger attrition share.', 'Group composition can explain part of a difference. Ordinal scales follow the source order; the categories are not measured distances.')
     with tab2:
         factor = st.selectbox('Tenure or compensation measure', ['YearsAtCompany', 'YearsInCurrentRole', 'TotalWorkingYears', 'YearsWithCurrManager', 'MonthlyIncome'], format_func=lambda x: LABELS[x])
-        st.plotly_chart(charts.boxes(df, factor, LABELS[factor]), use_container_width=True)
+        st.plotly_chart(charts.boxes(df, factor, LABELS[factor]), width='stretch', alt=f'{LABELS[factor]} by employee outcome. The accompanying table gives sample sizes, medians and quartiles.')
         explain('The line marks the median; the box spans the middle half of the group. Whiskers end at the most distant values within 1.5 interquartile ranges.', 'The median and spread show more than a single average can.', 'Outlier points are omitted. Outcome groups below n=10 are withheld. Income is in source units; currency is undocumented. No individual records are shown.')
         summary = distribution(df, factor)
         table_detail(summary.loc[summary.n >= MIN_GROUP], 'View sample sizes, means, medians and quartiles')
-        st.plotly_chart(charts.histogram(df, factor, LABELS[factor]), use_container_width=True)
+        st.plotly_chart(charts.histogram(df, factor, LABELS[factor]), width='stretch', alt=f'Binned distribution of {LABELS[factor].lower()}, using percentages within each employee outcome.')
         explain('A binned distribution with a separate percentage denominator for each outcome.', 'Normalising each outcome helps compare shapes despite the unequal number of retained and attrited records.', 'The bins are shared across outcomes, include their left boundary, and exclude their right boundary except the final bin. Binning can hide detail; no causal comparison is implied.')
 
 
@@ -175,7 +189,7 @@ def hypotheses():
                 rate_chart(df, 'JobSatisfaction', 'H3 · Satisfaction in source order', [1, 2, 3, 4])
             else:
                 field = 'YearsAtCompany' if key == 'H2' else 'MonthlyIncome'
-                st.plotly_chart(charts.boxes(df, field, LABELS[field]), use_container_width=True)
+                st.plotly_chart(charts.boxes(df, field, LABELS[field]), width='stretch', alt=f'{LABELS[field]} for attrited and retained records. Exact summaries are in the technical evidence table.')
             st.write(interpretations[key])
             with st.expander('Technical detail · decision rule and exact evidence'):
                 st.write(rules[key])
@@ -228,12 +242,12 @@ def methodology():
     with st.expander('Data dictionary'):
         st.dataframe(pd.read_csv(PROCESSED / 'data_dictionary_v1.csv'), hide_index=True, width='stretch')
     st.subheader('Lifecycle, maintenance and evaluation')
-    st.markdown((ROOT / 'docs/lifecycle.md').read_text(encoding='utf-8'))
+    st.markdown(document_text('lifecycle.md'))
     st.subheader('Delivery priorities')
-    st.markdown((ROOT / 'docs/plan.md').read_text(encoding='utf-8'))
+    st.markdown(document_text('plan.md'))
     st.subheader('What changed during the build')
-    st.markdown((ROOT / 'docs/retrospective.md').read_text(encoding='utf-8'))
+    st.markdown(document_text('retrospective.md'))
     st.subheader('Testing and release status')
-    st.markdown((ROOT / 'docs/testing.md').read_text(encoding='utf-8'))
+    st.markdown(document_text('testing.md'))
     st.subheader('Dataset source')
     st.markdown('Dataset: [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset), published by Pavan Subhash. Kaggle lists Database: Open Database, Contents: Database Contents. See data/SOURCE.md for the acquisition record and licence links.')

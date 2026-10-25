@@ -4,7 +4,7 @@
 
 RetainWise helps HR leaders explore workforce attrition patterns while keeping the limits of the evidence visible. Executive summaries, exact calculations and governance guidance sit in separate, connected views.
 
-**Status:** working local Streamlit app; live deployment is outstanding. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md) · [PRD](docs/PRD.md)
+**Status:** tested submission candidate; live hosting and final student review remain outstanding. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Submission checklist](docs/submission_checklist.md) · [Assessor walkthrough](docs/assessment_walkthrough.md) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md)
 
 The dataset is fictional. It does not describe IBM's actual workforce, predict who will leave, or justify employment decisions about individuals.
 
@@ -96,11 +96,13 @@ See [ICO worker-monitoring guidance](https://ico.org.uk/for-organisations/uk-gdp
 .venv/Scripts/python.exe -m pytest -q
 ```
 
-Each notebook runs in its own fresh kernel. The original CSV is included; `scripts/download_data.py` can reacquire it directly and rejects a changed checksum. Outputs are deterministic. `.gitattributes` preserves CSV bytes across operating systems. [Testing results](docs/testing.md) distinguish executed checks from outstanding gates; [usability scenarios](docs/user_testing.md) do not claim external participants.
+Each notebook runs in its own fresh kernel. The original CSV is included; `scripts/download_data.py` can reacquire it directly and rejects a changed checksum. Outputs are deterministic. `.gitattributes` preserves CSV bytes across operating systems. The final suite contains 16 passing tests. [Testing results](docs/testing.md) distinguish executed checks from outstanding gates; [usability scenarios](docs/user_testing.md) do not claim external participants.
+
+Run `python scripts/verify_submission.py --review-date YYYY-MM-DD` to verify source/output hashes, transformations, hypothesis evidence, dictionary completeness and notebook execution. After committing reviewed changes, `python scripts/package_submission.py` creates a source archive and checksum manifest under `artifacts/submission`.
 
 ## Accessibility and UX
 
-Labelled controls, readable headings, tooltips, natural category order and technical tables accompany the visuals. Outcome labels and histogram patterns supplement colour. Streamlit columns adapt to narrower screens and the sidebar collapses. These are practical accessibility choices, not WCAG certification. Independent keyboard and screen-reader review remain follow-up work.
+Labelled controls, readable headings, tooltips, natural category order, chart descriptions and technical tables accompany the visuals. Outcome labels and histogram patterns supplement colour. Streamlit columns adapt to narrower screens and the sidebar collapses. Automated accessibility checks found no violations of the selected WCAG-tagged rules across the five pages, and four keyboard tasks passed. This is not WCAG certification or a screen-reader audit.
 
 ## Project lifecycle and reflection
 
@@ -110,7 +112,7 @@ The [Unit 3 board](https://github.com/users/chasimarshad-bot/projects/4) tracks 
 
 ## Deployment
 
-Prepared for Streamlit Community Cloud or a Python container service; no live URL is claimed. There is no authenticated Streamlit hosting session in this environment. Sites uses Cloudflare Workers, which cannot host this persistent Python process. See [release instructions](docs/deployment.md). The repository remains private.
+The Linux container builds, runs as a non-root user and serves all five pages. A Render blueprint and Streamlit Community Cloud procedure are included; no live URL is claimed without a connected hosting account and verified deployment. See [release instructions](docs/deployment.md). The repository remains private.
 
 ## Technologies and structure
 

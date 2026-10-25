@@ -1,0 +1,58 @@
+{
+  "review_date": "2026-10-25",
+  "python": "3.12.8",
+  "reviewed_base_revision": "7f0cd165ebd68ee5433d9d5583ce5188ef609826",
+  "source_files_lf_sha256": {
+    "app.py": "d269b6da3e94a21097975bf70a0e61d396a92b1516cd0ba5cd6188467464bd0b",
+    "retainwise/ui.py": "82637974b857dae35fcdaf79abf9d09847c8c54da81eee73fda61d8f5c3c8df0",
+    "retainwise/data.py": "4cbaf4085d8d1094e231d020277cd0f47fb46021ad0fe804bf39ec56ba0954a1",
+    "retainwise/analysis.py": "4ce0545a15aa26adebeddb3a7b91bbe0c846238ecc62e2b173b81411ea0a6048",
+    "retainwise/charts.py": "d16e7833b269d2a4bdccb6b869643a94718f7f094293a1601d3796f72273508a",
+    "requirements.txt": "5296509af3e33c1b3d59f66dbedcb2bb76642cca7810b835eac04ec3f9455cc0",
+    "Dockerfile": "faf9854a57ba34234600bf0dc4953c78a63583221a298fd854c5928ea58d2176"
+  },
+  "checks": {
+    "source_validation": {
+      "rows": 1470,
+      "columns": 35,
+      "missing_values": 0,
+      "duplicate_rows": 0,
+      "identifier_unique": true,
+      "constant_columns": [
+        "EmployeeCount",
+        "Over18",
+        "StandardHours"
+      ],
+      "target_counts": {
+        "No": 1233,
+        "Yes": 237
+      }
+    },
+    "source_hash_matches": true,
+    "processed_hash_matches": true,
+    "preparation_matches_versioned_data": true,
+    "dictionary_complete": true,
+    "hypothesis_evidence_matches": true,
+    "notebooks": [
+      {
+        "file": "01_data_collection.ipynb",
+        "code_cells": 4,
+        "all_executed": true,
+        "error_outputs": 0
+      },
+      {
+        "file": "02_data_cleaning.ipynb",
+        "code_cells": 3,
+        "all_executed": true,
+        "error_outputs": 0
+      },
+      {
+        "file": "03_analysis_and_hypotheses.ipynb",
+        "code_cells": 5,
+        "all_executed": true,
+        "error_outputs": 0
+      }
+    ]
+  },
+  "result": "passed"
+}
