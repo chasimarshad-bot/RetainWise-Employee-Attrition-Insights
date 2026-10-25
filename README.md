@@ -4,7 +4,9 @@
 
 RetainWise helps HR leaders explore workforce attrition patterns while keeping the limits of the evidence visible. Executive summaries, exact calculations and governance guidance sit in separate, connected views.
 
-**Status:** tested submission candidate; deployment initiated, with hosted dashboard verification and final student review pending. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Submission checklist](docs/submission_checklist.md) · [Assessor walkthrough](docs/assessment_walkthrough.md) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md)
+**Status:** tested submission candidate; Streamlit deployment verified; final student review and assessment access checks remain. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Submission checklist](docs/submission_checklist.md) · [Assessor walkthrough](docs/assessment_walkthrough.md) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md)
+
+[Open RetainWise on Streamlit](https://retainwise-employee-attrition-insights-ckdeseustexxvlbbilmnna.streamlit.app/) ? live dashboard; all five pages and filter reset checked on 25 October 2026.
 
 The dataset is fictional. It does not describe IBM's actual workforce, predict who will leave, or justify employment decisions about individuals.
 
@@ -112,7 +114,7 @@ The [Unit 3 board](https://github.com/users/chasimarshad-bot/projects/4) tracks 
 
 ## Deployment
 
-Streamlit Community Cloud deployment has been initiated. The deployment address responds with the RetainWise page title, but the dashboard did not render during the latest browser checks. Hosted dashboard verification remains pending; the app is not yet confirmed ready for assessor access.
+Streamlit Community Cloud deployment is live. An unauthenticated browser check on 25 October 2026 confirmed the overview figures (1,470 records, 237 attrited, 16.1%), navigation across all five pages and filter reset. The dashboard is rendered inside a Streamlit frame; checking only the outer page can miss its content. Private repository and project-board access still need to be arranged for the assessor.
 
 The Linux container builds, runs as a non-root user and serves all five pages. Streamlit Community Cloud instructions and an alternative Render blueprint are included. See [release instructions](docs/deployment.md). The repository remains private.
 

@@ -1,0 +1,24 @@
+{
+  "review_date": "2026-10-25",
+  "url": "https://retainwise-employee-attrition-insights-ckdeseustexxvlbbilmnna.streamlit.app/",
+  "authentication": "none",
+  "pages_verified": [
+    "Executive Overview",
+    "Workforce Patterns",
+    "Hypothesis Lab",
+    "Fairness & Governance",
+    "Methodology & Project Plan"
+  ],
+  "overview": {
+    "records": 1470,
+    "attrited": 237,
+    "attrition_rate_display": "16.1%"
+  },
+  "reset_filters": "passed",
+  "visible_exceptions": false,
+  "limitations": [
+    "Exact deployed commit not independently verified",
+    "Hosted accessibility and responsive audit not repeated",
+    "Private source and board require assessor access"
+  ]
+}

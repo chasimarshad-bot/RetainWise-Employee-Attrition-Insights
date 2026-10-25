@@ -1,6 +1,12 @@
 # Running and releasing RetainWise
 
-**Live status: deployment initiated; hosted dashboard verification pending.** On 25 October 2026, the Streamlit deployment address returned HTTP 200 with the RetainWise page title, but the dashboard remained blank during two browser checks. This does not establish a working hosted release or assessor access.
+**Live status: deployed and browser-verified on 25 October 2026.**
+
+[Open RetainWise on Streamlit](https://retainwise-employee-attrition-insights-ckdeseustexxvlbbilmnna.streamlit.app/).
+
+An unauthenticated browser check confirmed the overview figures (1,470 records, 237 attrited, 16.1%), all five page headings, navigation and filter reset, with no visible application exceptions. The app renders inside a Streamlit frame; the earlier outer-page-only check incorrectly appeared blank. This is a hosted smoke check, not a complete repeat of local accessibility or responsive testing. The exact running commit was not independently exposed by the host.
+
+The app was accessible without signing in during this check. The source repository and project board remain private; arrange assessor access separately.
 
 ## Local run
 
@@ -22,7 +28,7 @@ The reviewed v1 dataset is committed; no Kaggle credentials or notebook executio
 4. Deploy without secrets. Confirm all five pages, filters, an empty selection, figures and external links on the hosted app.
 5. Record the returned URL in the README and this file, note the tested commit, and confirm access settings before claiming release.
 
-Confirm hosting account authorisation and inspect the Streamlit deployment logs before completing the hosted checks. No deployment credential is embedded in source. Record the live address as verified only after the dashboard renders and the navigation and filters pass review.
+No deployment credential is embedded in source. Recheck the hosted dashboard after runtime changes and confirm assessor access before submission.
 
 ## Container alternative
 

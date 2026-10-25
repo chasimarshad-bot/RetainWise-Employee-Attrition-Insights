@@ -57,7 +57,7 @@ if __name__ == '__main__':
         ('README and assessment evidence matrix', 'Done', 'Must Have', 'Exact artefacts linked; remaining release and student-review gates explicit.'),
         ('Final reproducibility and QA', 'Done', 'Must Have', '18 automated tests, three fresh-kernel notebooks, data-contract verification and local browser checks passed. Hosted verification belongs to the separate deployment task.'),
         ('Linux container verification', 'Done', 'Must Have', 'Pinned runtime image built; non-root health check and all five pages passed. See docs/qa/container_results.json.'),
-        ('Deploy Streamlit and verify hosted app', 'Todo', 'Must Have', 'No authenticated Streamlit host session available. See docs/deployment.md; do not claim a live URL.'),
+        ('Deploy Streamlit and verify hosted app', 'Done', 'Must Have', 'Live: https://retainwise-employee-attrition-insights-ckdeseustexxvlbbilmnna.streamlit.app/ . Unauthenticated hosted smoke check on 25 October 2026 verified overview figures, all five pages, navigation and filter reset. See docs/deployment.md. Private repository and board assessor access remain an owner check.'),
         ('Independent stakeholder feedback and student review', 'Todo', 'Should Have', 'No external participants claimed. Student must review the completed execution reflection and project evidence.'),
         ('Additional aggregate comparisons', 'Not Planned', 'Could Have', 'Deferred from the submission candidate to keep the agreed scope focused.'),
         ('Individual employee scoring and demographic targeting', 'Not Planned', "Won't Have", 'Prohibited product use; no implementation planned.'),
