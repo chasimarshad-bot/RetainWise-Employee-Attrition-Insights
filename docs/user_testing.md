@@ -20,3 +20,5 @@ Browser navigation, responsive layouts and explorer interaction checks are recor
 Ask one non-technical HR reader, one analyst and one governance reader to attempt the tasks above without prompting. With permission, record role, date, task completion, their explanation of a limitation, difficulties, changes and retest outcomes. Do not fill those results until people actually participate.
 
 Ch Asim should also explain each hypothesis calculation and transformation in his own words. Automated success does not establish student understanding.
+
+Use the [independent feedback session guide](final_review.md) to record real responses and follow-up changes.

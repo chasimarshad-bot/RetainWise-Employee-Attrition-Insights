@@ -29,3 +29,5 @@ The exact results and remaining test limitations are recorded in [testing.md](te
 Independent HR, analyst and governance feedback would strengthen the evaluation. No external participants are claimed. The recorded scenario-based checks follow the PRD's allowance for self-testing when independent participants are unavailable. A screen-reader audit would add accessibility evidence; automated checks and keyboard tasks do not replace it.
 
 An active GitHub Actions workflow is also useful but is not one of the seven listed assessment criteria. The template can be enabled after the owner grants workflow permission; local validation remains the executed evidence.
+
+[Final review questions, feedback record and assessor-access steps](final_review.md) keep the remaining owner and participant actions separate from completed technical checks.

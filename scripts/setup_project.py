@@ -58,12 +58,18 @@ if __name__ == '__main__':
         ('Final reproducibility and QA', 'Done', 'Must Have', '18 automated tests, three fresh-kernel notebooks, data-contract verification and local browser checks passed. Hosted verification belongs to the separate deployment task.'),
         ('Linux container verification', 'Done', 'Must Have', 'Pinned runtime image built; non-root health check and all five pages passed. See docs/qa/container_results.json.'),
         ('Deploy Streamlit and verify hosted app', 'Done', 'Must Have', 'Live: https://retainwise-employee-attrition-insights-ckdeseustexxvlbbilmnna.streamlit.app/ . Unauthenticated hosted smoke check on 25 October 2026 verified overview figures, all five pages, navigation and filter reset. See docs/deployment.md. Private repository and board assessor access remain an owner check.'),
-        ('Independent stakeholder feedback and student review', 'Todo', 'Should Have', 'No external participants claimed. Student must review the completed execution reflection and project evidence.'),
+        ('Independent stakeholder feedback', 'Todo', 'Should Have', 'Awaiting real participants. Use docs/final_review.md for tasks, questions and an unfilled response record; do not invent feedback.'),
+        ('Student understanding and final review', 'Todo', 'Must Have', 'Muhammad Asim Arshad must explain the calculations, transformations and limitations and review the reflection. See docs/final_review.md. Completion requires his actual review.'),
+        ('Assessor access to private evidence', 'Todo', 'Must Have', 'Public app passed an unauthenticated smoke check. Private repository and project-board access or an exported evidence package must be arranged using docs/final_review.md; recipient details are not supplied.'),
+        ('Refresh submission archive with hosted evidence', 'Done', 'Must Have', 'Updated source archive includes the live app link, hosted smoke-check record and final-review guidance. Revision and checksum are in the release asset manifest.'),
         ('Additional aggregate comparisons', 'Not Planned', 'Could Have', 'Deferred from the submission candidate to keep the agreed scope focused.'),
         ('Individual employee scoring and demographic targeting', 'Not Planned', "Won't Have", 'Prohibited product use; no implementation planned.'),
         ('Automated employment decisions and deep learning', 'Not Planned', "Won't Have", 'Outside the scope and responsible-use boundary.'),
     ]
     existing_items = query('query($p:ID!) { node(id:$p) { ... on ProjectV2 { items(first:100) { nodes { id content { ... on DraftIssue { id title body } } } } } } }', {'p': pid})['node']['items']['nodes']
+    for old_item in existing_items:
+        if (old_item.get('content') or {}).get('title') == 'Independent stakeholder feedback and student review':
+            query('mutation($p:ID!,$i:ID!) { deleteProjectV2Item(input:{projectId:$p,itemId:$i}) { deletedItemId } }', {'p': pid, 'i': old_item['id']})
     for title, state, prio, body in tasks:
         item = next((item for item in existing_items if (item.get('content') or {}).get('title') == title), None)
         if item is None:
