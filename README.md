@@ -1,6 +1,6 @@
 # RetainWise
 
-**Responsible Employee Attrition Insights** · Unit 3 capstone · Ch Asim Arshad
+**Responsible Employee Attrition Insights** · Unit 3 capstone · Muhammad Asim Arshad
 
 RetainWise helps HR leaders explore workforce attrition patterns while keeping the limits of the evidence visible. Executive summaries, exact calculations and governance guidance sit in separate, connected views.
 
