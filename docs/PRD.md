@@ -3,7 +3,7 @@
 ## RetainWise — Responsible Employee Attrition Insights
 
 **Assessment:** Unit 3 Capstone — Ethical Practice and Communication in Data  
-**Student:** Ch Asim Arshad  
+**Student:** Muhammad Asim Arshad  
 **Product type:** Interactive Streamlit Data App  
 **Primary audience:** HR / People Analytics leadership  
 **Secondary audiences:** People Analysts, HR Business Partners, Data Protection / Governance stakeholders  
