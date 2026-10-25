@@ -108,7 +108,7 @@ Labelled controls, readable headings, tooltips, natural category order, chart de
 
 The [Unit 3 board](https://github.com/users/chasimarshad-bot/projects/4) tracks Status and MoSCoW Priority. The [plan](docs/plan.md) records dependencies and acceptance evidence. The [lifecycle](docs/lifecycle.md) covers implementation, release, maintenance, versioned updates, evaluation and retirement. The static fictional source has no scheduled refresh; real use would require named HR data and governance owners.
 
-[Build reflection](docs/retrospective.md) records actual issues: source terms, satisfaction's non-monotonic result, narrow filters, snapshot interpretation and hosting compatibility. It is not Ch Asim's personal reflection. The [changelog](docs/CHANGELOG.md) records delivered work.
+[Execution reflection](docs/retrospective.md) evaluates the results against the plan, the analytical and ethical decisions, implementation problems, validation, scope and changes for a second iteration. It uses recorded project evidence. Ch Asim should review it alongside the calculations before submitting. The [changelog](docs/CHANGELOG.md) records delivered work.
 
 ## Deployment
 

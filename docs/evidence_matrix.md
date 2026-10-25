@@ -15,7 +15,7 @@ This map identifies artefacts, not guaranteed assessment grades.
 ## Final owner/student checks
 
 - A live Streamlit deployment and verification against its exact commit remain outstanding.
-- Ch Asim must review the project and add his own reflection and learning evidence.
+- Ch Asim must review the completed execution reflection and confirm his understanding of the project and calculations.
 - Confirm the PRD's mapping against the actual handbook, which was not supplied here.
 
 ## Recorded test scope

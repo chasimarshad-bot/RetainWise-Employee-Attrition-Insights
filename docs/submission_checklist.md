@@ -20,7 +20,7 @@ The exact results and remaining test limitations are recorded in [testing.md](te
 
 ## Final checks requiring the owner or student
 
-1. **Student review:** Ch Asim must read the evidence, explain the methods and provide his own reflection. [technical_review.md](technical_review.md) supports that discussion but does not attest to it.
+1. **Student review:** Ch Asim must read the completed [execution reflection](retrospective.md), review the evidence and confirm his understanding. [technical_review.md](technical_review.md) supports that discussion but does not attest to it.
 2. **Handbook confirmation:** compare [evidence_matrix.md](evidence_matrix.md) with the actual assessment handbook. The mapping currently follows the supplied PRD; the original handbook was not provided.
 3. **Hosting and assessor access:** complete the account connection in [deployment.md](deployment.md), verify the returned live address, and ensure the assessor can access the private repository/project or the exported archive. A local health check does not establish a hosted release.
 
