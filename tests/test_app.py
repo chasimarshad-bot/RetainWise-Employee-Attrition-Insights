@@ -52,3 +52,16 @@ def test_methodology_links_open_repository_files_instead_of_app_routes():
     text = document_text('testing.md')
     assert 'https://github.com/chasimarshad-bot/RetainWise-Employee-Attrition-Insights/blob/main/docs/qa/browser_results.json' in text
     assert '](qa/browser_results.json)' not in text
+
+
+def test_all_withheld_groups_explain_why_no_rate_chart_is_shown():
+    app = AppTest.from_string('''
+import pandas as pd
+from retainwise.ui import rate_chart
+df = pd.DataFrame({'team': ['A']*6 + ['B']*6, 'Attrition_Flag': [0, 1]*6})
+rate_chart(df, 'team', 'Observed attrition by team')
+''', default_timeout=30).run()
+    assert not app.exception
+    assert any('No group rates can be shown' in item.value for item in app.info)
+    assert len(app.get('plotly_chart')) == 0
+    assert len(app.dataframe) == 1

@@ -73,3 +73,15 @@ def test_one_outcome_distribution_is_valid():
     retained = df.loc[df.Status == 'Retained']
     assert len(boxes(retained, 'MonthlyIncome', 'Income').data) == 1
     assert len(histogram(retained, 'MonthlyIncome', 'Income').data) == 1
+
+
+def test_v1_rejects_changed_source_even_when_its_schema_is_valid(tmp_path, monkeypatch):
+    import retainwise.data as pipeline
+    changed = pd.read_csv(RAW)
+    changed.loc[0, 'MonthlyIncome'] += 1
+    validate_source(changed)
+    source = tmp_path / 'changed.csv'
+    changed.to_csv(source, index=False)
+    monkeypatch.setattr(pipeline, 'RAW', source)
+    with pytest.raises(ValueError, match='reviewed v1 snapshot'):
+        pipeline.write_version()

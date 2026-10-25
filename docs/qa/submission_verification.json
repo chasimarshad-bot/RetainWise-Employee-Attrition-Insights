@@ -1,11 +1,11 @@
 {
   "review_date": "2026-10-25",
   "python": "3.12.8",
-  "reviewed_base_revision": "7f0cd165ebd68ee5433d9d5583ce5188ef609826",
+  "reviewed_base_revision": "685b8be205540b0bb70e98a8ad24e7ef4fda8d95",
   "source_files_lf_sha256": {
     "app.py": "d269b6da3e94a21097975bf70a0e61d396a92b1516cd0ba5cd6188467464bd0b",
-    "retainwise/ui.py": "82637974b857dae35fcdaf79abf9d09847c8c54da81eee73fda61d8f5c3c8df0",
-    "retainwise/data.py": "4cbaf4085d8d1094e231d020277cd0f47fb46021ad0fe804bf39ec56ba0954a1",
+    "retainwise/ui.py": "47b4937deaac304890688fe2ace53aa289d9b742037abc2488275c80b7d55b59",
+    "retainwise/data.py": "3bf89655fcc212ffb9e73109350821d50ff998d7ff631235430fad4b9ee39c8f",
     "retainwise/analysis.py": "4ce0545a15aa26adebeddb3a7b91bbe0c846238ecc62e2b173b81411ea0a6048",
     "retainwise/charts.py": "d16e7833b269d2a4bdccb6b869643a94718f7f094293a1601d3796f72273508a",
     "requirements.txt": "5296509af3e33c1b3d59f66dbedcb2bb76642cca7810b835eac04ec3f9455cc0",

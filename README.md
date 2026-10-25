@@ -96,7 +96,7 @@ See [ICO worker-monitoring guidance](https://ico.org.uk/for-organisations/uk-gdp
 .venv/Scripts/python.exe -m pytest -q
 ```
 
-Each notebook runs in its own fresh kernel. The original CSV is included; `scripts/download_data.py` can reacquire it directly and rejects a changed checksum. Outputs are deterministic. `.gitattributes` preserves CSV bytes across operating systems. The final suite contains 16 passing tests. [Testing results](docs/testing.md) distinguish executed checks from outstanding gates; [usability scenarios](docs/user_testing.md) do not claim external participants.
+Each notebook runs in its own fresh kernel. The original CSV is included; `scripts/download_data.py` can reacquire it directly and rejects a changed checksum. Preparation also checks the reviewed source hash before writing v1. Outputs are deterministic. `.gitattributes` preserves CSV bytes across operating systems. The final suite contains 18 passing tests. [Testing results](docs/testing.md) distinguish executed checks from outstanding gates; [usability scenarios](docs/user_testing.md) do not claim external participants.
 
 Run `python scripts/verify_submission.py --review-date YYYY-MM-DD` to verify source/output hashes, transformations, hypothesis evidence, dictionary completeness and notebook execution. After committing reviewed changes, `python scripts/package_submission.py` creates a source archive and checksum manifest under `artifacts/submission`.
 

@@ -55,7 +55,7 @@ if __name__ == '__main__':
         ('Accessibility and responsive browser review', 'Done', 'Must Have', 'Five pages checked at 390, 768 and 1440px; automated scan returned zero selected-rule violations and four keyboard tasks passed. No formal conformance or screen-reader claim.'),
         ('Scenario-based usability checks', 'Done', 'Must Have', 'docs/user_testing.md records automated scenarios and distinguishes them from external participants.'),
         ('README and assessment evidence matrix', 'Done', 'Must Have', 'Exact artefacts linked; remaining release and student-review gates explicit.'),
-        ('Final reproducibility and QA', 'Done', 'Must Have', '16 automated tests, three fresh-kernel notebooks, data-contract verification and local browser checks passed. Hosted verification belongs to the separate deployment task.'),
+        ('Final reproducibility and QA', 'Done', 'Must Have', '18 automated tests, three fresh-kernel notebooks, data-contract verification and local browser checks passed. Hosted verification belongs to the separate deployment task.'),
         ('Linux container verification', 'Done', 'Must Have', 'Pinned runtime image built; non-root health check and all five pages passed. See docs/qa/container_results.json.'),
         ('Deploy Streamlit and verify hosted app', 'Todo', 'Must Have', 'No authenticated Streamlit host session available. See docs/deployment.md; do not claim a live URL.'),
         ('Independent stakeholder feedback and student review', 'Todo', 'Should Have', 'No external participants claimed. Student must review the completed execution reflection and project evidence.'),

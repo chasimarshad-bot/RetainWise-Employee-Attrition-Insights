@@ -2,6 +2,7 @@
 
 ## Submission candidate · 25 October 2026
 
+- Completed a pre-submission evidence review, corrected filtered-outcome wording, explained wholly withheld comparisons and enforced the reviewed v1 source hash; regression suite increased to 18 cases.
 - Completed the execution reflection, including evaluation against the plan and priorities for a second iteration.
 - Updated Streamlit to 1.66.1 and added accessible chart descriptions.
 - Corrected caption contrast, document-link resolution and test discovery.

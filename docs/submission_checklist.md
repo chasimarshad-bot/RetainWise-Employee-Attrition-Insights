@@ -16,7 +16,7 @@
 | Testing evidence | Automated data/app tests, browser results, keyboard tasks and accessibility findings |
 | Reviewable package | Source archive with revision/checksum manifest, walkthrough and evidence map |
 
-The exact results and remaining test limitations are recorded in [testing.md](testing.md). This checklist is an evidence index, not an assessment grade or a claim of formal accessibility conformance.
+The exact results and remaining test limitations are recorded in [testing.md](testing.md); the [pre-submission review](pre_submission_review.md) maps the reviewed evidence to each criterion. This checklist is an evidence index, not an assessment grade or a claim of formal accessibility conformance.
 
 ## Final checks requiring the owner or student
 

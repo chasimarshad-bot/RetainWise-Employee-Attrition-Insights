@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data/raw/WA_Fn-UseC_-HR-Employee-Attrition.csv'
 PROCESSED = ROOT / 'data/processed/v1'
 DATA = PROCESSED / 'employee_attrition_v1.csv'
+SOURCE_SHA256 = 'a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659'
 AGE_ORDER = ['18–29', '30–39', '40–49', '50–60']
 TENURE_ORDER = ['0–1 years', '2–5 years', '6–10 years', '11+ years']
 ORDINALS = {
@@ -134,6 +135,8 @@ def dictionary(df):
 
 
 def write_version():
+    if hashlib.sha256(RAW.read_bytes()).hexdigest() != SOURCE_SHA256:
+        raise ValueError('Source differs from the reviewed v1 snapshot. Review the change and create a new version before processing.')
     raw = pd.read_csv(RAW)
     report = validate_source(raw)
     clean = prepare(raw)

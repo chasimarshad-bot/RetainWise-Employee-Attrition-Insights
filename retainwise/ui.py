@@ -96,6 +96,10 @@ def rate_chart(df, field, title, order=None):
     display = table.copy()
     if field in ORDINALS:
         display[field] = display[field].map(lambda value: f'{value} · {ORDINALS[field][value]}').astype(str)
+    if table.rate_pct.notna().sum() == 0:
+        st.info('No group rates can be shown: every group has fewer than 10 records. Broaden the filters to compare rates.')
+        table_detail(display)
+        return table
     fig = charts.rates(display, field, title)
     fig.update_xaxes(title_text=label)
     st.plotly_chart(fig, width='stretch', alt=f'{title}. The figures table provides group sizes, attrited counts and observed percentages.')
@@ -122,7 +126,7 @@ def executive():
     left_col, right_col = st.columns(2)
     with left_col:
         st.plotly_chart(charts.outcomes(df), width='stretch', alt=f'Employee outcomes: {total-left:,} retained and {left:,} attrited in the selected cohort.')
-        explain('Counts for each outcome in the selected group.', 'The imbalance helps put rate comparisons in context: fewer records describe employees who left.')
+        explain('Counts for each outcome in the selected group.', 'The number of records behind each outcome helps put rate and distribution comparisons in context.')
         table_detail(df.Status.value_counts().rename_axis('Outcome').reset_index(name='Employees'))
     with right_col:
         rate_chart(df, 'OverTime', 'How observed attrition differs by overtime', ['No', 'Yes'])
