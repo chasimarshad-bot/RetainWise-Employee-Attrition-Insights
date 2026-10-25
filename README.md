@@ -4,7 +4,7 @@
 
 RetainWise helps HR leaders explore workforce attrition patterns while keeping the limits of the evidence visible. Executive summaries, exact calculations and governance guidance sit in separate, connected views.
 
-**Status:** tested submission candidate; live hosting and final student review remain outstanding. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Submission checklist](docs/submission_checklist.md) · [Assessor walkthrough](docs/assessment_walkthrough.md) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md)
+**Status:** tested submission candidate; deployment initiated, with hosted dashboard verification and final student review pending. [Dashboard preview](docs/screenshots/overview-desktop.png) · [Submission checklist](docs/submission_checklist.md) · [Assessor walkthrough](docs/assessment_walkthrough.md) · [Deployment steps](docs/deployment.md) · [Unit 3 project board](https://github.com/users/chasimarshad-bot/projects/4) · [Assessment evidence](docs/evidence_matrix.md)
 
 The dataset is fictional. It does not describe IBM's actual workforce, predict who will leave, or justify employment decisions about individuals.
 
@@ -108,11 +108,13 @@ Labelled controls, readable headings, tooltips, natural category order, chart de
 
 The [Unit 3 board](https://github.com/users/chasimarshad-bot/projects/4) tracks Status and MoSCoW Priority. The [plan](docs/plan.md) records dependencies and acceptance evidence. The [lifecycle](docs/lifecycle.md) covers implementation, release, maintenance, versioned updates, evaluation and retirement. The static fictional source has no scheduled refresh; real use would require named HR data and governance owners.
 
-[Execution reflection](docs/retrospective.md) evaluates the results against the plan, the analytical and ethical decisions, implementation problems, validation, scope and changes for a second iteration. It uses recorded project evidence. Ch Asim should review it alongside the calculations before submitting. The [changelog](docs/CHANGELOG.md) records delivered work.
+[Execution reflection](docs/retrospective.md) evaluates the results against the plan, the analytical and ethical decisions, implementation problems, validation, scope and changes for a second iteration. It uses recorded project evidence. Muhammad Asim Arshad should review it alongside the calculations before submitting. The [changelog](docs/CHANGELOG.md) records delivered work.
 
 ## Deployment
 
-The Linux container builds, runs as a non-root user and serves all five pages. A Render blueprint and Streamlit Community Cloud procedure are included; no live URL is claimed without a connected hosting account and verified deployment. See [release instructions](docs/deployment.md). The repository remains private.
+Streamlit Community Cloud deployment has been initiated. The deployment address responds with the RetainWise page title, but the dashboard did not render during the latest browser checks. Hosted dashboard verification remains pending; the app is not yet confirmed ready for assessor access.
+
+The Linux container builds, runs as a non-root user and serves all five pages. Streamlit Community Cloud instructions and an alternative Render blueprint are included. See [release instructions](docs/deployment.md). The repository remains private.
 
 ## Technologies and structure
 

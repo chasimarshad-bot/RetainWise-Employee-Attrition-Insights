@@ -1,6 +1,6 @@
 # Running and releasing RetainWise
 
-**Live status: not deployed.** Local application checks do not establish a public deployment. No live URL is claimed.
+**Live status: deployment initiated; hosted dashboard verification pending.** On 25 October 2026, the Streamlit deployment address returned HTTP 200 with the RetainWise page title, but the dashboard remained blank during two browser checks. This does not establish a working hosted release or assessor access.
 
 ## Local run
 
@@ -22,7 +22,7 @@ The reviewed v1 dataset is committed; no Kaggle credentials or notebook executio
 4. Deploy without secrets. Confirm all five pages, filters, an empty selection, figures and external links on the hosted app.
 5. Record the returned URL in the README and this file, note the tested commit, and confirm access settings before claiming release.
 
-Hosting account authorisation is still required. No deployment credential is embedded in source, and no public address is claimed before a hosted app has been verified.
+Confirm hosting account authorisation and inspect the Streamlit deployment logs before completing the hosted checks. No deployment credential is embedded in source. Record the live address as verified only after the dashboard renders and the navigation and filters pass review.
 
 ## Container alternative
 
